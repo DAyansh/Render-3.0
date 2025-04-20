@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <h2>Hi, There</h2>
+  <h4> Welcome to myExpense Manager,</h4>
+  <div class="container">
+    <div class="left-panel">
+      <h3>Your Budget</h3>
+      <h1 id="balance">&#8377;0.00</h1>
+
+      <div class="Wallet">
+        <h3><i>Wallet</h3>
+
+      </div>
+      <div class="inc-exp-container">
+        <div>
+          <h4><i class="fas fa-arrow-up" style="color: green; margin-right: 5px;"></i>Income</h4>
+          <p id="money-plus" class="money-plus">+&#8377;0.00</p>
+        </div>
+        <div>
+          <h4><i class="fas fa-arrow-down" style="color: red; margin-right: 5px;"></i>Expense</h4>
+          <p id="money-minus" class="money-minus">-&#8377;0.00</p>
+        </div>
+      </div>
+      
+      <h3>Add New Transaction</h3>
+
+<!-- Income Section -->
+<div class="Income">
+  <h4>Add Income</h4>
+  <p id="error" class="error-msg"></p>
+  <form id="form1">
+    <div class="form-control">
+      <label for="income-amount">Amount</label><br>
+      <input type="number" id="income-amount" placeholder="Enter income amount" />
+    </div>
+    <button class="btn">Submit Income</button>
+  </form>
+</div>
+
+<!-- Expense Section -->
+<div class="Expense">
+  <h4>Add Expense</h4>
+  <form id="form2">
+    <div class="form-control">
+      <label for="expense-type">Type of Expense</label><br>
+      <input type="text" id="expense-type" placeholder="e.g. Food, Travel" />
+    </div>
+    <div class="form-control">
+      <label for="expense-amount">Amount</label><br>
+      <input type="number" id="expense-amount" placeholder="Enter expense amount" />
+    </div>
+    <button class="btn">Submit Expense</button>
+  </form>
+</div>
+<button class="btn danger-btn" onclick="clearAll()">Clear All</button>
+
+<h4>Here, U Spent your Money</h4>
+<div class="ExpenseType">
+  <ul>
+  <li><strong>
+    <i class="fas fa-utensils" style="color: orange; margin-right: 5px;"></i>
+    Food :: &#8377;0.00
+  </strong></li>
+  <li><strong>
+    <i class="fas fa-shopping-basket" style="color: green; margin-right: 5px;"></i>
+    Grocery ::&#8377;0.00
+  </strong></li>
+  <li><strong>
+    <i class="fas fa-file-invoice-dollar" style="color: teal; margin-right: 5px;"></i>
+    Bills ::&#8377;0.00
+  </strong></li>
+  <li><strong>
+    <i class="fas fa-film" style="color: purple; margin-right: 5px;"></i>
+    Entertainment ::&#8377;0.00
+  </strong></li>
+<li><strong>
+  <i class="fas fa-tshirt" style="color:hotpink; margin-right: 5px;"></i>
+  Clothes ::&#8377;0.00
+</strong></li></ul></div>    
+
+    <div class="right-panel">
+      <h3>History</h3>
+      <ul id="list" class="list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
